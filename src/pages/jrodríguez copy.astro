@@ -1,0 +1,124 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background-size: cover;
+  }
+  .header {
+    display: flex;
+    justify-content: center; /* Centrar las imágenes */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .header .img-container {
+    flex: 1;
+    text-align: center;
+  }
+  .header img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+  }
+  .header .img-central {
+    flex: 1;
+    text-align: center;
+  }
+  .header .img-central img {
+    max-width: 250px;
+  }
+  .contenedor {
+    width: 66%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid #004488;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+  }
+  .desvanecido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .contenido {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+  }
+  .texto-escritura {
+    color: white;
+    font-size: 20px;
+    text-shadow: 
+      -1px -1px 0px black,  
+      1px -1px 0px black,
+      -1px 1px 0px black,
+      1px 1px 0px black;
+    margin-top: 20px;
+  }
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background: url("img/image2.jpeg") no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+  }
+  .background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("img/fondo_adicional.png") no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+  }
+</style>
+
+<Layout title="Nueva Pestaña">
+  <header class="header">
+    <div class="img-container">
+      <img src="img/Rayo_Vallecano.png" alt="Izquierda" />
+    </div>
+    <div class="img-central">
+      <img src="img/j_rodriguez.png" alt="Central" />
+    </div>
+    <div class="img-container">
+      <img src="img/LaLiga.png" alt="Derecha" />
+    </div>
+  </header>
+  <main>
+    <div class="background-layer"></div> <!-- Nueva capa de fondo -->
+    <div class="contenedor">
+      <div class="desvanecido"></div>
+      <div class="contenido">
+        <h1 class="texto-escritura">Bienvenido a la Nueva Pestaña</h1>
+        <p class="texto-escritura">Aquí puedes agregar el contenido que desees.</p>
+        <p class="texto-escritura">
+          James Rodríguez es un futbolista colombiano conocido por su habilidad y visión en el campo. 
+          Algunos de sus logros más destacados incluyen:
+          <ul>
+            <li>Máximo goleador de la Copa Mundial de la FIFA 2014.</li>
+            <li>Ganador de la Liga de Campeones de la UEFA con el Real Madrid.</li>
+            <li>Premio Puskás de la FIFA al mejor gol del año en 2014.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>

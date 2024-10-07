@@ -1,0 +1,165 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/fondo_jugador.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el body ocupe al menos el 100% de la altura de la ventana */
+  }
+
+  .header {
+    display: flex;
+    justify-content: center; /* Centrar las imágenes */
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 220px; /* Ajusta este valor según lo que necesites */
+  }
+
+  .header .img-container,
+  .header .img-central {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px; /* Espaciado igual a ambos lados */
+  }
+
+  .header img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .header .img-central img {
+    max-width: 250px;
+  }
+
+  .contenedor {
+    width: 66%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid #004488;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    flex: 1; /* Permite que el contenedor ocupe espacio en el main */
+    padding-bottom: 70px; /* Espacio para el footer */
+  }
+
+  .desvanecido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .contenido {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+  }
+
+  .texto-escritura {
+    color: white;
+    font-size: 20px;
+    text-shadow: 
+      -1px -1px 0px black,  
+      1px -1px 0px black,
+      -1px 1px 0px black,
+      1px 1px 0px black;
+    margin-top: 20px;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 5px; /* Reduce el padding para hacer el footer más delgado */
+    background: url("img/image2.jpeg") no-repeat center center;
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 50px; /* Ajusta la altura del footer aquí */
+    position: relative; /* Cambia a relative para evitar que se superponga */
+  }
+
+  .background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("img/image1.") no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  .nombre {
+    color: white;
+    font-family: 'Arturo', sans-serif; /* Cambiar a la fuente deseada */
+    font-size: 20px; /* Ajusta el tamaño de la fuente según sea necesario */
+    margin-top: 10px; /* Espaciado entre la imagen y el nombre */
+    padding-right: 190px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el desbordamiento si el texto es demasiado largo */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto se desborda */
+    text-shadow: 
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black; /* Contorno negro fuerte */
+  }
+</style>
+
+<Layout title="Nueva Pestaña">
+  <header class="header">
+    <div class="img-container">
+      <img src="img/Rayo_Vallecano.png" alt="Izquierda" />
+    </div>
+    <div class="img-central">
+      <img src="img/j_rodriguez.png" alt="Central" />
+      <div class="nombre">James David Rodríguez Rubio</div>
+    </div>
+    <div class="img-container">
+      <img src="img/LaLiga.png" alt="Derecha" />
+    </div>
+  </header>
+  <main>
+    <div class="background-layer"></div> <!-- Nueva capa de fondo -->
+    <div class="contenedor">
+      <div class="desvanecido"></div>
+      <div class="contenido">
+        <h1 class="texto-escritura">Bienvenido a la Nueva Pestaña</h1>
+        <p class="texto-escritura">
+          James David Rodríguez Rubio, conocido como James Rodríguez, nació el 12 de julio de 1991 en Cúcuta, Colombia. Desde pequeño mostró un talento excepcional para el fútbol, comenzando su carrera en las divisiones juveniles del Envigado FC, donde rápidamente se destacó como un jugador prometedor. 
+        </p>
+        <p class="texto-escritura">
+          A los 17 años, James debutó profesionalmente con el Envigado y, tras una destacada actuación, se trasladó a Europa para unirse al Club Portugués Porto. Con el Porto, ganó varios títulos, incluidos tres campeonatos de la Primeira Liga y la UEFA Europa League en 2011. Durante su tiempo en el club, se convirtió en el máximo goleador del equipo y fue reconocido como uno de los mejores talentos emergentes en el fútbol europeo.
+        </p>
+        <p class="texto-escritura">
+          En 2013, James se unió al AS Monaco de la Ligue 1, donde continuó brillando. Fue el máximo goleador de la liga en la temporada 2013-2014 y ayudó al equipo a clasificarse para la UEFA Champions League. Su destacada actuación en el club lo llevó a ser fichado por el Real Madrid en 2014.
+        </p>
+        <p class="texto-escritura">
+          Con el Real Madrid, James alcanzó la cúspide de su carrera. Ganó múltiples títulos, incluidos dos títulos de La Liga y la UEFA Champions League en 2016. Su participación en el Mundial de la FIFA 2014 fue memorable, ya que se convirtió en el máximo goleador del torneo y su gol contra Uruguay fue elegido como el mejor gol del año, llevándolo a ganar el Premio Puskás.
+        </p>
+        <p class="texto-escritura">
+          Tras su exitoso paso por el Real Madrid, James fue cedido al Bayern de Múnich, donde ganó otros títulos importantes, como la Bundesliga y la Champions League. Su estilo de juego creativo, visión de juego y habilidad para marcar goles lo han consolidado como uno de los futbolistas colombianos más destacados de la historia.
+        </p>
+        <p class="texto-escritura">
+          Algunos de los momentos más icónicos de su carrera incluyen su actuación estelar en la Copa Mundial de 2014, su increíble gol desde fuera del área en el Mundial, y su habilidad para realizar asistencias decisivas en partidos cruciales. James continúa siendo una figura influyente en el fútbol mundial, inspirando a futuras generaciones de futbolistas.
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+</Layout>
